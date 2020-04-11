@@ -8,7 +8,7 @@
 using namespace std;
 
 // Change These 
-LPCSTR folderPath = R "(.\)";
+LPCSTR folderPath = R"(.\)";
 string fileName = "testfile.txt";
 //
 
@@ -52,18 +52,17 @@ void read(){
     } else cout << "TxtSpy --> Unable to open file";
   }
   cout << "TxtSpy --> Copy to Clipboard? (Y/N)\n";
-  char x;
-  char y;
+  char x,y;
   cin >> x;
   if (x == 'y' || x == 'Y') {
     stringstream ss;
     copy(file.begin(), file.end(), ostream_iterator < std::string > (ss, "\n"));
-    cout << "TxtSpy --> Contents of " + fileName + " copied Successfully";
+    cout << "TxtSpy --> Contents of " + fileName + " copied Successfully\n";
     size_t len = strlen(ss.str().c_str());
     HWND hwnd = GetDesktopWindow();
     toClipboard(hwnd, ss.str());
   }
-  cout << endl << "TxtSpy --> Clear Contents of " + fileName + "? (Y/N)\n";
+  cout << "TxtSpy --> Clear Contents of " + fileName + "? (Y/N)\n";
   cin >> y;
   if (y == 'y' || x == 'Y') {
     ofstream clr(filePath);
