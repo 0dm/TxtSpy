@@ -1,0 +1,1 @@
+Clears contents of file in directory, separate application.
