@@ -8,4 +8,4 @@ Here's a demonstration:
 # ClrLog
 
 Another thing I made in my spare time that I didn't know where to put so now it's in this repo :)
-I made it speed things up when debugging another project of mine, double clicking it will clear the specified text file.
+I made it speed things up (and get more familiar with C) when debugging another project of mine, double clicking it will clear the specified text file.
